@@ -1,12 +1,11 @@
 ## Виртуальное окружение
-python -m venv venv
+<code>python -m venv venv</code> - создание виртуального окружения
 .\venv\Scripts\activate - актвиация виртуального окружения
 
 В консоли командной строки должно появиться, например, такое: 
 (venv) PS C:\Users\Ingodwetrust\Desktop\SysToolLauncher> 
 
-Посмотреть какие пакеты установлены сейчас
-pip list
+Посмотреть какие пакеты установлены сейчас <code>pip list</code>
 
 Примерный вывод в консоли командной строки после выполнения предыдущей команды:
 Package            Version
@@ -20,8 +19,12 @@ shiboken6          6.7.2
 
 ## Принцип работы
 1. Нужно сначала создать виртуальное окружение
-2.  Открыть в проводнике дизайнер по такому пути: C:\Users\Ingodwetrust\Desktop\SysToolLauncher\venv\Lib\site-packages\PySide6\designer.exe и в нем уже создать макет. Далее сохранить в виде ui_mainwindow.ui
-3. Далее нужно преобразовать этот файл в питоновский следующим образом:
+2. Установить пакет
+```
+   pip install pyside6
+```
+4.  Открыть в проводнике дизайнер по такому пути: C:\Users\Ingodwetrust\Desktop\SysToolLauncher\venv\Lib\site-packages\PySide6\designer.exe и в нем уже создать макет. Далее сохранить в виде ui_mainwindow.ui
+5. Далее нужно преобразовать этот файл в питоновский следующим образом:
    pyside6-uic ui_mainwindow.ui > ui_mainwindow.py
 Если возникнет ошибку при открытии файла основого питона main.py,  выполнить то, что указано в разделе "Ошибки и решения"
 
